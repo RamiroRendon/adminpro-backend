@@ -7,10 +7,8 @@ const router = Router();
 
 // Obtener todos los docentes
 router.get('/', getDocentes);
-
 // Obtener docente por ID
 router.get('/id/:id', getDocentesId);
-
 // Agregar docente
 router.post('/', [
         check('nombre', 'Nombre es requerido').not().isEmpty(),
@@ -20,7 +18,6 @@ router.post('/', [
     ],
     addDocentes
 );
-
 // Editar docente
 router.put('/:id', [
         check('nombre', 'Nombre es requerido').not().isEmpty(),
@@ -30,7 +27,6 @@ router.put('/:id', [
     ],
     updateDocentes
 );
-
 // Eliminar docente
 router.delete('/:id', deleteDocente);
 
